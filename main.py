@@ -14,15 +14,13 @@ HISTORIAL_FILE = "historial.json"
 # --- CONFIGURACIÓN DE BÚSQUEDA ---
 MUNICIPIO = "La Oliva"
 PALABRAS_CLAVE = [
-    "catálogo arquitectónico",
-    "catalogo arquitectonico",
-    "catálogo patrimonial",
-    "catalogo patrimonial",
-    "catálogo municipal",
-    "catalogo municipal",
-    "bienes patrimoniales",
-    "patrimonio histórico",
-    "patrimonio historico"
+    "catálogo",
+    "catalogo",
+    "patrimonio",
+    "patrimonial",
+    "arquitectónico",
+    "arquitectonico",
+    "bienes"
 ]
 
 def cargar_historial():
@@ -77,7 +75,7 @@ def buscar_google_news():
     nuevas = []
     
     # Búsqueda estricta que cubre prensa canaria y nacional, más el ministerio de cultura específicamente
-    query = '("Catálogo Arquitectónico" OR "Catálogo Patrimonial" OR "Catálogo Municipal" OR "Bienes Patrimoniales" OR "Patrimonio Histórico") AND "La Oliva" when:2m'
+    query = '("Catálogo" OR "Patrimonio" OR "Bienes") AND "La Oliva" when:2m'
     query_encoded = urllib.parse.quote(query)
     
     url = f"https://news.google.com/rss/search?q={query_encoded}&hl=es&gl=ES&ceid=ES:es"
